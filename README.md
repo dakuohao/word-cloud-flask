@@ -94,12 +94,6 @@ curl --location --request POST 'http://word-cloud-flask-prod.qd-aliyun-internal2
 | stopwords | 停用词库 | url | 否   | 停用词库先上传OSS，然后传值URL<br><br>非必填，不传值则返回全量分词 | 通用停用词库：<br><br>https://haier-btbrrs-public.oss-cn-qingdao.aliyuncs.com/wordcloud/stopwords/stopwords.txt |
 | top | 按频次取前几个 | int | 否   | 按分词后词语出现的频次自大到小排序后，取前几位<br><br>正整数，非必填，不传值则返回全量分词 | 500 |
 
-停用词库：
-
-- 通用停用词库：https://haier-btbrrs-public.oss-cn-qingdao.aliyuncs.com/wordcloud/stopwords/stopwords.txt
-- 百度停用词库：https://haier-btbrrs-public.oss-cn-qingdao.aliyuncs.com/wordcloud/stopwords/baidu_stopwords.txt
-- 中文停用词库：https://haier-btbrrs-public.oss-cn-qingdao.aliyuncs.com/wordcloud/stopwords/cn_stopwords.txt
-- 哈工大停用词库：https://haier-btbrrs-public.oss-cn-qingdao.aliyuncs.com/wordcloud/stopwords/hit_stopwords.txt
 
 请求示例：
 
@@ -137,10 +131,3 @@ curl --location --request POST 'http://localhost:8000/api/v1/wordCloud/wordSegme
 **为什么使用Python？**
 
 自然语言处理领域，无疑是Python的生态最好，其他语言也有部分支持，选Java和nodejs的库跑了几个模型，效果一言难尽，考虑到后期各种复杂业务场景，选择Python生态。
-## 中文常用停用词库
-
-- baidu_stopwords.txt  百度停用词库
-- cn_stopwords.txt 中文停用词库
-- hit_stopwords.txt 哈工大停用词库
-- scu_stopwords.txt 四川大学机器智能实验室停用词库
-- stopwords.txt 常用停用词库
